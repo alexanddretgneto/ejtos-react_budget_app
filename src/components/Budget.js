@@ -1,14 +1,15 @@
 import React, { useContext,useState } from 'react';
 import { AppContext } from '../context/AppContext';
+import Location from './Location';
 
 
 const Budget = (props) => {
-    const { budget } = useContext(AppContext);
+    const { budget, Location } = useContext(AppContext);
     const [ setCost] = useState('');
     
     return (
         <div className='alert alert-secondary'>
-            <span>Budget: £</span>
+            <span>Budget: {Location} </span>
             <input
                         required='required'
                         type='number'
